@@ -1,0 +1,48 @@
+1. Carregamento Inicial dos Dados
+Ação: O programa tenta carregar dados de famílias armazenados em um arquivo JSON.
+Função: carregar_dados()
+Se o arquivo familias.json existir, ele será lido e o dicionário familias será preenchido.
+Se o arquivo não for encontrado, o dicionário é inicializado vazio.
+2. Iniciar a Interface Gráfica
+Ação: A interface gráfica (GUI) é inicializada usando a biblioteca tkinter.
+Função: iniciar_interface()
+Tela Principal: Criação da janela principal do aplicativo com botões para acessar as funcionalidades.
+3. Cadastrar uma Família
+Ação: Quando o usuário clicar no botão "Cadastrar Família", uma nova janela será aberta para o cadastro.
+Função: abrir_tela_cadastro()
+Passos:
+Recebe os dados do responsável, telefone, cônjuge e filhos.
+Usa a função cadastrar_familia() para adicionar a família ao dicionário familias.
+Os dados são salvos no arquivo familias.json com a função salvar_dados().
+Mostra uma mensagem de confirmação ao usuário.
+4. Registrar Retirada de Alimentos
+Ação: O usuário clica em "Registrar Retirada de Alimentos", e uma nova janela é aberta.
+Função: abrir_tela_retirada()
+Passos:
+O nome do responsável, nome do alimento e quantidade são inseridos.
+A função registrar_retirada() é chamada para registrar a retirada no dicionário.
+Os dados são salvos com salvar_dados(), e uma mensagem de confirmação é exibida.
+5. Verificar Últimas Retiradas
+Ação: O usuário clica em "Verificar Últimas Retiradas".
+Função: exibir_familias_ultima_retirada()
+Passos:
+O programa itera sobre todas as famílias registradas.
+Exibe a última retirada de alimentos para cada família.
+6. Verificar Famílias sem Retirada em 30 Dias
+Ação: O usuário clica em "Verificar Famílias sem Retirada".
+Função: verificar_familias_sem_retirada()
+Passos:
+O programa calcula a data de 30 dias atrás.
+Verifica se alguma família não fez retiradas nos últimos 30 dias ou nunca fez.
+Mostra um alerta ao usuário com as famílias em falta.
+7. Exibir Histórico de Retiradas
+Ação: O usuário insere o nome do responsável e clica em "Exibir Histórico".
+Função: exibir_historico()
+Passos:
+O programa verifica o nome inserido.
+Se o nome existir, exibe o histórico de retiradas da família.
+8. Salvar Dados
+Ação: Sempre que uma nova família é cadastrada ou uma retirada é feita, os dados são salvos.
+Função: salvar_dados()
+Passos: Escreve o dicionário familias no arquivo familias.json no formato JSON.
+Esse diagrama de passos pode ser transformado em fluxograma ou gráfico de atividades, dependendo da sua necessidade.
